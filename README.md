@@ -30,7 +30,7 @@ Calculate the optical flow of consecutive frames.
 ## Training
 
 A standard CNN model was employed using the Nvidia system taken from [another repository](https://github.com/ArtyZiff35/CNN_Dashcam_Speed_Detector). The training whilst holding the video in memory was too much for my computer so code had to be used to delete variables as the model was trained.
-'''python
+''' python
 # clear RAM
 del video_preprocess
 '''
