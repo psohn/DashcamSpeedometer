@@ -27,6 +27,8 @@ Calculate the optical flow of consecutive frames.
 
 ![optical flow image](https://i.gyazo.com/e1cf7804b76caed705c36a05d485c363.png)
 
+![masked optical flow image](https://i.gyazo.com/ee496d19fcd0123b2eeacb317b2cd98d.png)
+
 ## Training
 
 A standard CNN model was employed using the Nvidia system taken from [another repository](https://github.com/ArtyZiff35/CNN_Dashcam_Speed_Detector). The training whilst holding the video in memory was too much for my computer so code had to be used to delete variables as the model was trained.
