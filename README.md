@@ -1,6 +1,7 @@
 # DashcamSpeedometer
 A CNN trained to predict vehicle speed based on dashcam footage from comma.ai's [dashcam speed challenge](https://github.com/commaai/speedchallenge) using dense optical flow calculations. The dashcam footage was in 20 fps and had a recorded speed for each frame. 
-## Method
+
+## Preprocessing Video
 
 Look at the base image for objects that might be relevant.
 
@@ -12,8 +13,6 @@ Use the road lines as markers by filtering for road line colours.
 
 Find canny edges on the road lines.
 
-![gray image](https://i.gyazo.com/a408f19200510a04f7e10cf69ca020c7.png)
-
 ![canny image](https://i.gyazo.com/4701b0438625ace6b8498c101523d939.png)
 
 Apply a mask on the road to filter out the sky and dashboard.
@@ -24,3 +23,14 @@ Reapply the canny edges but to the original image.
 
 ![preprocessed image](https://i.gyazo.com/0a982486f6cb198f28108972d24d9848.png)
 
+Calculate the optical flow of consecutive frames.
+
+![optical flow image](https://i.gyazo.com/e1cf7804b76caed705c36a05d485c363.png)
+
+## Training
+
+A standard CNN model was employed using the Nvidia system taken from [another repository](https://github.com/ArtyZiff35/CNN_Dashcam_Speed_Detector). The training whilst holding the video in memory was too much for my computer so code had to be used to delete variables as the model was trained.
+'''python
+# clear RAM
+del video_preprocess
+'''
