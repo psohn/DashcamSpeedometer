@@ -31,6 +31,11 @@ Calculate the optical flow of consecutive frames.
 
 A standard CNN model was employed using the Nvidia system taken from [another repository](https://github.com/ArtyZiff35/CNN_Dashcam_Speed_Detector). The training whilst holding the video in memory was too much for my computer so code had to be used to delete variables as the model was trained.
 
+```python
+# clear RAM
+del video_preprocess
+```
+
 ## Evaluation
 
 Using a 30% validation set, an MSE of 7.7 was achieved after 8 epochs of training.
