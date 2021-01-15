@@ -9,11 +9,11 @@ Look at the base image for objects that might be relevant.
 
 Use the road lines as markers by filtering for road line colours.
 
-![white yellow filter](https://i.gyazo.com/2647e9b00aef7c82835cda6b0e5c1212.png)
+![white yellow filter](https://i.gyazo.com/8ab0b850c0b73ec81e30993125a65fda.png)
 
 Find canny edges on the road lines.
 
-![canny image](https://i.gyazo.com/4701b0438625ace6b8498c101523d939.png)
+![canny image](https://i.gyazo.com/c8ad3160b326a7bec5a385ac267e88a0.png)
 
 Apply a mask on the road to filter out the sky and dashboard.
 
